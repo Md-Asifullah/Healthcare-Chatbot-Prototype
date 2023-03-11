@@ -42,9 +42,7 @@ const Capabilities = () => (
                 </tr>
                 <tr>
                     <td>Diarrhea, Diphtheria, Headaches, HIV, Influenza</td>
-                    <td>
-                        Healthy diet, Manage Blood Pressure, Manage Blood Sugar
-                    </td>
+                    <td>Diet, Manage Blood Pressure, Manage Blood Sugar</td>
                     <td>Intermittent fasting, Kickboxing, Martial Arts</td>
                 </tr>
                 <tr>
