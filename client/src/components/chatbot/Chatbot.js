@@ -212,11 +212,18 @@ class Chatbot extends Component {
                         bottom: 0,
                         right: 0,
                         border: '1px solid lightgrey',
+                        background: '#ffffff',
                     }}
                 >
                     <nav>
-                        <div className="nav-wrapper">
-                            <a href="/" className="brand-logo">
+                        <div className="nav-wrapper teal accent-4">
+                            <a
+                                href="/"
+                                className="brand-logo"
+                                style={{
+                                    marginLeft: 10,
+                                }}
+                            >
                                 Cakap Sihat
                             </a>
                             <ul
@@ -270,8 +277,14 @@ class Chatbot extends Component {
                     }}
                 >
                     <nav>
-                        <div className="nav-wrapper">
-                            <a href="/" className="brand-logo">
+                        <div className="nav-wrapper teal accent-4">
+                            <a
+                                href="/"
+                                className="brand-logo"
+                                style={{
+                                    marginLeft: 10,
+                                }}
+                            >
                                 Cakap Sihat
                             </a>
                             <ul
