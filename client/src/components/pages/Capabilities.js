@@ -46,7 +46,7 @@ const Capabilities = () => (
                     <td>Intermittent fasting, Kickboxing, Martial Arts</td>
                 </tr>
                 <tr>
-                    <td>Pneumonia, Malaria, Measles, Meningitis, Mumps, </td>
+                    <td> Malaria, Measles, Meningitis, Mumps, Pneumonia</td>
                     <td>Meditation, Nutrition, Quit Smoking</td>
                     <td>Running, Strength Training, Stretching</td>
                 </tr>
