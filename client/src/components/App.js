@@ -4,18 +4,18 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Landing from './pages/Landing';
 import About from './pages/About';
-import Capabilities from './pages/Capabilities';
+import Shop from './shop/Shop';
 import Chatbot from './chatbot/Chatbot';
 
 const App = () => (
-    <div className="">
+    <div>
         <BrowserRouter>
-            <div className="">
+            <div className="container">
                 <Header />
                 <Routes>
                     <Route path="/" element={<Landing />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/capabilities" element={<Capabilities />} />
+                    <Route path="/shop" element={<Shop />} />
                 </Routes>
                 <Chatbot />
             </div>

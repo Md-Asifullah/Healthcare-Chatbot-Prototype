@@ -1,6 +1,6 @@
 'use strict';
 
-const dialogflow = require('@google-cloud/dialogflow').v2beta1;
+const dialogflow = require('@google-cloud/dialogflow');
 // const dialogflow = require('dialogflow');
 const structjson = require('./structjson');
 const { struct } = require('pb-util');
@@ -20,16 +20,6 @@ const sessionClient = new dialogflow.SessionsClient({
     projectID,
     credentials,
 });
-
-const knowledgeBaseId = 'MzU3NjM1MzQzNDEyMDQ4NjkxMg';
-
-const knowledgeBasePath =
-    'projects/' +
-    config.googleProjectID +
-    '/knowledgeBases/' +
-    knowledgeBaseId +
-    '';
-
 const sessionPath = sessionClient.projectAgentSessionPath(projectID, sessionId);
 // const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 
@@ -40,6 +30,10 @@ const HealthScreeningRegistration = mongoose.model(
 module.exports = {
     textQuery: async function (text, userID, parameters = {}) {
         let self = module.exports;
+        // let sessionPath = sessionClient.sessionPath(
+        //     projectId,
+        //     sessionId + userID
+        // );
         let sessionPath = sessionClient.projectAgentSessionPath(
             config.googleProjectID,
             sessionId + userID
@@ -54,16 +48,10 @@ module.exports = {
                     languageCode: config.dialogFlowSessionLanguageCode,
                 },
             },
-            // queryParams: {
-            //     payload: {
-            //         data: parameters,
-            //     },
-            // },
             queryParams: {
                 payload: {
                     data: parameters,
                 },
-                knowledgeBaseNames: [knowledgeBasePath],
             },
         };
         let responses = await sessionClient.detectIntent(request);

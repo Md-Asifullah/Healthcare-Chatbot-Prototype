@@ -6,13 +6,12 @@ const Message = (props) => (
             <div className="row valign-wrapper">
                 {props.speaks === 'bot' && (
                     <div className="col s2">
-                        <img
-                            src={require('../images/cakap_sihat_avatar.png')}
-                            alt="logo"
-                            style={{
-                                width: 50,
-                            }}
-                        />
+                        <a
+                            href="/"
+                            className="btn-floating btn-large waves-effect waves-light red"
+                        >
+                            {props.speaks}
+                        </a>
                     </div>
                 )}
                 <div className="col s10">
@@ -20,13 +19,12 @@ const Message = (props) => (
                 </div>
                 {props.speaks === 'user' && (
                     <div className="col s2">
-                        <img
-                            src={require('../images/user_avatar.png')}
-                            alt="logo"
-                            style={{
-                                width: 50,
-                            }}
-                        />
+                        <a
+                            href="/"
+                            className="btn-floating btn-large waves-effect waves-light red"
+                        >
+                            {props.speaks}
+                        </a>
                     </div>
                 )}
             </div>

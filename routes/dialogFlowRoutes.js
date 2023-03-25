@@ -1,9 +1,9 @@
 const chatbot = require('../chatbot/chatbot');
 
 module.exports = (app) => {
-    app.get('/', (req, res) => {
-        res.send({ hello: 'I am cakap sihat. Talking from the backend' });
-    });
+    // app.get('/', (req, res) => {
+    //     res.send({ hello: 'I am cakap sihat. How are you?' });
+    // });
 
     app.post('/api/df_text_query', async (req, res) => {
         let responses = await chatbot.textQuery(
@@ -23,4 +23,4 @@ module.exports = (app) => {
         res.send(responses[0].queryResult);
     });
 };
-console.log('End of code');
+// console.log('End of code');
